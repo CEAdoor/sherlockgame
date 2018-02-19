@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 LEVEL 3
+    form.form(action="/" method="POST")
+        p this is a question
+        label(for="option") Options
+        input(type="text" name="option")
+        input(type="submit" value="submit")
