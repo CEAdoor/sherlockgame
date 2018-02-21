@@ -12,17 +12,20 @@ html
       header.top
         nav.navbar.navbar-expand-lg.navbar-light
           .container
-            a.navbar-brand(href="#") Home
+            a.navbar-brand(href="#")
+              img.fluid-img(src="/images/logo.png")
             button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
               span.navbar-toggler-icon
             #navbarSupportedContent.collapse.navbar-collapse
               ul.navbar-nav.ml-auto
-                li.nav-item: a.nav-link(href="/logout", class=(currentPath.startsWith('/logout') ? 'active' : '')) Logout
+                li.nav-item: a.nav-link(href="/rules", class=(currentPath.startsWith('/rules') ? 'active' : '')) Rules
+                li.nav-item: a.nav-link(href="/rules", class=(currentPath.startsWith('/about') ? 'active' : '')) About
+                li.nav-item: a.nav-link(href="/rules", class=(currentPath.startsWith('/hints') ? 'active' : '')) Hints
                 if user
                   li.nav-item: a.nav-link(href="/logout", class=(currentPath.startsWith('/logout') ? 'active' : '')) Logout
-                else
-                  li.nav-item: a.nav-link(href="/register", class=(currentPath.startsWith('/register') ? 'active' : '')) Register
-                  li.nav-item: a.nav-link(href="/login", class=(currentPath.startsWith('/login') ? 'active' : '')) Log In
+                //else
+                //  li.nav-item: a.nav-link(href="/register", class=(currentPath.startsWith('/register') ? 'active' : '')) Register
+                //  li.nav-item: a.nav-link(href="/login", class=(currentPath.startsWith('/login') ? 'active' : '')) Log In
 
     block messages
       if locals.flashes

@@ -59,11 +59,11 @@ body
 .navbar-light .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.5);
 }
-.bg-image
+.navbar-light .navbar-nav .nav-link:hover
 {
-
-
+    color: gold;
 }
+
 .icon
 {
     color: #ffffffc4;
@@ -93,19 +93,37 @@ p
 {
     border-bottom: 0.5px solid #fff;
 }
-.login-form
+.head
 {
-    margin-top: 5%;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
-.s-login-form
+.head h2
 {
-    margin-top: 20%;
-    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.head-s h2
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+.head-s
+{
+    margin-top: 10%;
+    margin-bottom: 5px;
 }
 .input-holder-button
 {
     padding-top: 0px;
+}
+.login-form
+{
+    margin-bottom: 30px;
+}
+.s-login-form
+{
+    margin-bottom: 30px;
 }
 .button
 {
