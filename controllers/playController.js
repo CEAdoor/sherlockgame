@@ -41,10 +41,12 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
+            req.flash('success','Answer is correct');
             res.redirect('/play');
             }
             else
         {
+            req.flash('success','Wrong Answer');
             res.redirect('/play');
         }
 
@@ -59,10 +61,12 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
+            req.flash('success','Answer is correct')
             res.redirect('/play');
         }
         else
         {
+            req.flash('success','Wrong Answer');
             res.redirect('/play');
         }
 
@@ -77,10 +81,12 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
+            req.flash('success','Answer is correct')
             res.redirect('/play');
         }
         else
         {
+            req.flash('success','Wrong Answer');
             res.redirect('/play');
         }
 
@@ -95,10 +101,12 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
+            req.flash('success','Answer is correct')
             res.redirect('/play');
         }
         else
         {
+            req.flash('success','Wrong Answer');
             res.redirect('/play');
         }
 
@@ -113,10 +121,12 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
+            req.flash('success','Answer is correct')
             res.redirect('/play');
         }
         else
         {
+            req.flash('success','Wrong Answer');
             res.redirect('/play');
         }
 

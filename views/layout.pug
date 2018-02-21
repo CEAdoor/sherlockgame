@@ -12,15 +12,15 @@ html
       header.top
         nav.navbar.navbar-expand-lg.navbar-light
           .container
-            a.navbar-brand(href="#")
+            a.navbar-brand(href="/")
               img.fluid-img(src="/images/logo.png")
             button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
               span.navbar-toggler-icon
             #navbarSupportedContent.collapse.navbar-collapse
               ul.navbar-nav.ml-auto
                 li.nav-item: a.nav-link(href="/rules", class=(currentPath.startsWith('/rules') ? 'active' : '')) Rules
-                li.nav-item: a.nav-link(href="/rules", class=(currentPath.startsWith('/about') ? 'active' : '')) About
-                li.nav-item: a.nav-link(href="/rules", class=(currentPath.startsWith('/hints') ? 'active' : '')) Hints
+                li.nav-item: a.nav-link(href="/about", class=(currentPath.startsWith('/about') ? 'active' : '')) About
+                li.nav-item: a.nav-link(href="#", class=(currentPath.startsWith('/hints') ? 'active' : '')) Hints
                 if user
                   li.nav-item: a.nav-link(href="/logout", class=(currentPath.startsWith('/logout') ? 'active' : '')) Logout
                 //else
@@ -29,7 +29,7 @@ html
 
     block messages
       if locals.flashes
-        .inner
+        .inner.text-center
           .flash-messages
             - const categories = Object.keys(locals.flashes)
             each category in categories

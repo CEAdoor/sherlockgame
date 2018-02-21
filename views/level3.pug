@@ -1,9 +1,19 @@
 extends layout
 
 block content
-    h1 LEVEL 3
-    form.form(action="/play" method="POST")
-        p this is a question
-        label(for="option") Options
-        input.form-control(type="text" name="option")
-        input.form-control(type="submit" value="submit")
+    #level
+        .container
+            .row
+                .offset-md-3.col-md-6.text-center
+                    .row
+                        .col
+                            h1 LEVEL 3
+                    .row
+                        .col
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q
+                    .row
+                        form(action="/play" method="POST")
+                            .form-group
+                                input.form-control(type="text" placeholder="Answer" name="option")
+                            .form-group
+                                input.btn.btn-default.pl-button(type="submit" value="SUBMIT")

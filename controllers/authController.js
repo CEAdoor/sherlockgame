@@ -8,6 +8,13 @@ exports.login = passport.authenticate('local',{
     successFlash: 'You are now logged in'
 
 });
+exports.flogin = passport.authenticate('local',{
+    failureRedirect: '/login',
+    failureFlash: 'Failed Login',
+    successRedirect: '/rules',
+    successFlash: 'You are now logged in'
+
+});
 
 exports.logout = (req,res) => {
   req.logout();
@@ -22,4 +29,12 @@ exports.isLoggedIn = (req,res,next) => {
       return;
   }
   res.redirect('/register');
+};
+exports.isNotLoggedIn = (req,res,next) => {
+    if(req.isAuthenticated())
+    {
+        res.redirect('/play');
+        return;
+    }
+    next();
 };

@@ -28,7 +28,7 @@ a:hover
 .pl-button
 {
     display:block;
-    float: right;
+    margin: 0 auto;
     text-transform:uppercase;
     text-decoration:none;
     background-color:transparent;
@@ -238,7 +238,7 @@ p
 #level
 {
     color: #fff;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 #level .pl-button
 {
@@ -259,4 +259,12 @@ audio
     background: transparent;
     position: absolute;
     bottom: 0;
+}
+.nav-link, .navbar-light .navbar-nav .nav-link.active
+{
+    color:gold;
+}
+.content p
+{
+    text-align: center;
 }

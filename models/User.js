@@ -5,6 +5,7 @@ const md5 = require('md5');
 const validator = require('validator');
 const mongodbErrorHandler = require('mongoose-mongodb-errors');
 const passportLocalMongoose = require('passport-local-mongoose');
+var uniqueValidator = require('mongoose-unique-validator');
 
 const userSchema = new Schema({
   email: {
@@ -22,6 +23,7 @@ const userSchema = new Schema({
   },
     teamname: {
         type: String,
+        unique:true,
         required: 'Please supply a team name',
         trim: true
     },
@@ -36,6 +38,7 @@ const userSchema = new Schema({
     }
 });
 
+userSchema.plugin(uniqueValidator);
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 userSchema.plugin(mongodbErrorHandler);
 
