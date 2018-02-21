@@ -1,16 +1,23 @@
 #main
 {
     height: 100vh;
-    background: #000;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/bg2.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 #main .content
 {
-    padding-top: 40vh;
+    padding-top: 30vh;
 }
 
 .content h3
 {
+    font-size: 3em;
     color: gold;
+    font-weight: bold;
 }
 .content p
 {
@@ -175,7 +182,7 @@ p
 }
 .flash
 {
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 10px;
     background-color: #333;
     color: #fff;
@@ -239,6 +246,7 @@ p
 {
     color: #fff;
     margin-top: 5%;
+    margin-bottom: 10px;
 }
 #level .pl-button
 {
@@ -267,4 +275,45 @@ audio
 .content p
 {
     text-align: center;
+}
+.custom-toggler.navbar-toggler {
+    border-color: #fff;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.about
+{
+    margin-top: 10px;
+}
+.about h1
+{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.about p
+{
+    font-size: 16px !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    text-transform: none !important;
+    text-align: left !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.head_1
+{
+    padding-bottom: 30px;
+}
+.head_2
+{
+    padding-bottom: 30px;
+}
+.head-3
+{
+    padding-top: 30px;
+}
+.ab
+{
+    margin-top: 1 !important;
 }

@@ -1,11 +1,11 @@
 doctype html
 html
   head
-    title= `${title}`
+    title= `${title} | Sherlock Holmes`
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
     link(rel='stylesheet', href='/dist/main.css')
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat")
-    link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
+    link(rel="shortcut icon" type="image/png" href="/images/favicon.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
     block header
@@ -14,13 +14,13 @@ html
           .container
             a.navbar-brand(href="/")
               img.fluid-img(src="/images/logo.png")
-            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
-              span.navbar-toggler-icon
+            button.navbar-toggler.custom-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+              span.navbar-inverse.navbar-toggler-icon
             #navbarSupportedContent.collapse.navbar-collapse
               ul.navbar-nav.ml-auto
                 li.nav-item: a.nav-link(href="/rules", class=(currentPath.startsWith('/rules') ? 'active' : '')) Rules
                 li.nav-item: a.nav-link(href="/about", class=(currentPath.startsWith('/about') ? 'active' : '')) About
-                li.nav-item: a.nav-link(href="#", class=(currentPath.startsWith('/hints') ? 'active' : '')) Hints
+                li.nav-item: a.nav-link(href="https://www.facebook.com/eesacea/?ti=as", class=(currentPath.startsWith('/hints') ? 'active' : '')) Hints
                 if user
                   li.nav-item: a.nav-link(href="/logout", class=(currentPath.startsWith('/logout') ? 'active' : '')) Logout
                 //else

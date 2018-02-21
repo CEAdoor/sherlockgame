@@ -4,16 +4,23 @@ block content
     #level
         .container
             .row
-                .offset-md-3.col-md-6.text-center
+                .offset-md-2.col-md-8.text-center
                     .row
+                        .col.head_1
+                            h1 CASE 2
+                    .row.head_2
                         .col
-                            h1 LEVEL 2
-                    .row
+                            img.img-fluid(src="/images/p1.jpg")
                         .col
-                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q
+                            img.img-fluid(src="/images/p2.jpg")
                     .row
                         form(action="/play" method="POST")
                             .form-group
                                 input.form-control(type="text" placeholder="Answer" name="option")
                             .form-group
                                 input.btn.btn-default.pl-button(type="submit" value="SUBMIT")
+    //form.form(action="/play" method="POST")
+    //    p this is a question
+    //    label(for="option") Options
+    //    input(type="text" name="option")
+    //    input(type="submit" value="submit")

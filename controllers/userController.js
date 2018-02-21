@@ -25,11 +25,13 @@ exports.registerForm = (req, res) => {
 exports.validateRegister = (req, res, next) => {
     req.sanitizeBody('name');
     req.sanitizeBody('teamname');
+    req.sanitizeBody('collegename');
     req.sanitizeBody('phonenumber');
     req.checkBody('name', 'You must supply a name!').notEmpty();
     req.checkBody('email', 'That Email is not valid!').isEmail();
     req.checkBody('teamname', 'You must supply a team name!').notEmpty();
-    req.checkBody('teamname', 'You must supply a phone number!').notEmpty();
+    req.checkBody('phonenumber', 'You must supply a phone number!').notEmpty();
+    req.checkBody('collegename', 'You must supply a college name!').notEmpty();
     req.sanitizeBody('email').normalizeEmail({
         gmail_remove_dots: false,
         remove_extension: false,
@@ -50,7 +52,7 @@ exports.validateRegister = (req, res, next) => {
 
 exports.register =async (req, res, next) => {
     try{
-        const user = new User({ email: req.body.email, name: req.body.name ,teamname: req.body.teamname, phonenumber: req.body.phonenumber});
+        const user = new User({ email: req.body.email, name: req.body.name ,teamname: req.body.teamname,collegename: req.body.collegename, phonenumber: req.body.phonenumber});
         const register = promisify(User.register, User);
         await register(user, req.body.password);
         next();

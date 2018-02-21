@@ -21,19 +21,19 @@ exports.play = (req,res) =>{
         return;
     }
     if(level === 4) {
-        res.render('level5', {title: 'Play'});
-        return;
-    }
-    if(level === 5) {
         res.render('completed', {title: 'Play'});
         return;
     }
+    // if(level === 5) {
+    //     res.render('completed', {title: 'Play'});
+    //     return;
+    // }
 };
 exports.newlevel = async(req,res) =>{
     option = req.body.option
     if(req.user.level === 0)
     {
-        if(option === "a") {
+        if(option === "abdulnazirkunju") {
             const user = await User.findOneAndUpdate(
                 {_id: req.user._id},
                 {$set: {
@@ -53,7 +53,7 @@ exports.newlevel = async(req,res) =>{
     }
     if(req.user.level === 1)
     {
-        if(option === "b") {
+        if(option === "kaylanalake") {
             const user = await User.findOneAndUpdate(
                 {_id: req.user._id},
                 {$set: {
@@ -73,7 +73,7 @@ exports.newlevel = async(req,res) =>{
     }
     if(req.user.level === 2)
     {
-        if(option === "c") {
+        if(option === "kakkayamcamp") {
             const user = await User.findOneAndUpdate(
                 {_id: req.user._id},
                 {$set: {
@@ -93,7 +93,7 @@ exports.newlevel = async(req,res) =>{
     }
     if(req.user.level === 3)
     {
-        if(option === "d") {
+        if(option === "16122012") {
             const user = await User.findOneAndUpdate(
                 {_id: req.user._id},
                 {$set: {

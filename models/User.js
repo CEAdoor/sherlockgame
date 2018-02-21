@@ -27,6 +27,11 @@ const userSchema = new Schema({
         required: 'Please supply a team name',
         trim: true
     },
+    collegename: {
+        type: String,
+        required: 'Please supply a collage name',
+        trim: true
+    },
     phonenumber: {
         type: String,
         required: 'Please supply a phone number',
