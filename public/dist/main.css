@@ -47,13 +47,17 @@ a:hover
 
 body
 {
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/bg1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
+}
+/*navbar*/
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
 }
 .bg-image
 {
@@ -230,4 +234,11 @@ p
     display: block;
     margin:0 auto;
     width: 70%;
+}
+audio
+{
+    visibility: hidden;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
 }
