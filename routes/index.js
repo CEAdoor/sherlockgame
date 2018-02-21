@@ -9,8 +9,8 @@ const { catchErrors } = require('../handlers/errorHandlers');
 router.get('/login', userController.loginForm);
 router.post('/login', authController.login);
 router.get('/play',authController.isLoggedIn,playController.play);
-router.get('/',authController.isLoggedIn,playController.play);
-router.post('/',playController.newlevel);
+router.get('/',userController.home);
+router.post('/play',playController.newlevel);
 router.get('/register', userController.registerForm);
 router.post('/register',
     userController.validateRegister,

@@ -2,21 +2,28 @@ doctype html
 html
   head
     title= `${title}`
-    link(rel='stylesheet', href='/dist/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/dist/main.css')
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat")
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
     block header
       header.top
-        nav.nav
-          .nav__section.nav__section--pages
-            if user
-              li.nav__item: a.nav__link(href="/logout", class=(currentPath.startsWith('/logout') ? 'nav__link--active' : ''))
-                != h.icon('logout')
-                span Logout
-            else
-              li.nav__item: a.nav__link(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : '')) Register
-              li.nav__item: a.nav__link(href="/login", class=(currentPath.startsWith('/login') ? 'nav__link--active' : '')) Log In
+        nav.navbar.navbar-expand-lg.navbar-light
+          .container
+            a.navbar-brand(href="#") Home
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+              span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+              ul.navbar-nav.ml-auto
+                if user
+                  li.nav-item: a.nav-link(href="/logout", class=(currentPath.startsWith('/logout') ? 'active' : ''))
+                    != h.icon('logout')
+                    span Logout
+                else
+                  li.nav-item: a.nav-link(href="/register", class=(currentPath.startsWith('/register') ? 'active' : '')) Register
+                  li.nav-item: a.nav-link(href="/login", class=(currentPath.startsWith('/login') ? 'active' : '')) Log In
 
     block messages
       if locals.flashes
@@ -32,5 +39,7 @@ html
       block content
 
     block scripts
-      script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
+      script(src="http://code.jquery.com/jquery-3.3.1.js")
+      script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+      script(src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
       script(src="/dist/App.bundle.js")

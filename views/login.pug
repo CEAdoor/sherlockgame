@@ -3,5 +3,26 @@ extends layout
 include mixins/_loginForm
 
 block content
-  .inner
-    +loginForm()
+  .bg-image
+    .container
+      .row
+        .col-md-12
+      .s-login-form
+        .row
+          .col-md-4.offset-md-4
+            form(action="/login" method="POST")
+              .input-holder
+                i.icon.fas.fa-envelope
+                input.input(type="email" name="email" placeholder="Email")
+              .input-holder
+                i.icon.fas.fa-lock
+                input.input(type="password" name="password" placeholder="Password")
+              .reg
+                p Not registered ?
+                  a.link(href="/register")  Sign Up
+              .input-holder-button
+                input.pl-button(type="submit" value="Log In")
+
+
+  //section.inner
+  //  +loginForm()

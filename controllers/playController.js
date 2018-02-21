@@ -41,11 +41,11 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
-            res.redirect('/');
+            res.redirect('/play');
             }
             else
         {
-            res.redirect('/');
+            res.redirect('/play');
         }
 
     }
@@ -59,11 +59,11 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
-            res.redirect('/');
+            res.redirect('/play');
         }
         else
         {
-            res.redirect('/');
+            res.redirect('/play');
         }
 
     }
@@ -77,11 +77,11 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
-            res.redirect('/');
+            res.redirect('/play');
         }
         else
         {
-            res.redirect('/');
+            res.redirect('/play');
         }
 
     }
@@ -95,11 +95,11 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
-            res.redirect('/');
+            res.redirect('/play');
         }
         else
         {
-            res.redirect('/');
+            res.redirect('/play');
         }
 
     }
@@ -113,11 +113,11 @@ exports.newlevel = async(req,res) =>{
                 }},
                 {new:true,runValidators:true,context: 'query'}
             );
-            res.redirect('/');
+            res.redirect('/play');
         }
         else
         {
-            res.redirect('/');
+            res.redirect('/play');
         }
 
     }

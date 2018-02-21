@@ -6,14 +6,22 @@ exports.loginForm = (req, res) => {
     res.render('login', { title: 'Login' });
 };
 
+exports.home = (req, res) => {
+    res.sendFile('public/index.html');
+};
+
 exports.registerForm = (req, res) => {
     res.render('register', { title: 'Register' });
 };
 
 exports.validateRegister = (req, res, next) => {
     req.sanitizeBody('name');
+    req.sanitizeBody('teamname');
+    req.sanitizeBody('phonenumber');
     req.checkBody('name', 'You must supply a name!').notEmpty();
     req.checkBody('email', 'That Email is not valid!').isEmail();
+    req.checkBody('name', 'You must supply a team name!').notEmpty();
+    req.checkBody('name', 'You must supply a phone number!').notEmpty();
     req.sanitizeBody('email').normalizeEmail({
         gmail_remove_dots: false,
         remove_extension: false,
@@ -33,7 +41,7 @@ exports.validateRegister = (req, res, next) => {
 };
 
 exports.register = async (req, res, next) => {
-    const user = new User({ email: req.body.email, name: req.body.name});
+    const user = new User({ email: req.body.email, name: req.body.name ,teamname: req.body.teamname, phonenumber: req.body.phonenumber});
     const register = promisify(User.register, User);
     await register(user, req.body.password);
     next(); // pass to authController.login

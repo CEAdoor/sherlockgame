@@ -1,15 +1,32 @@
 extends layout
 
 block content
-  .inner
-    form.form(action="/register" method="POST")
-      h2 Register
-      label(for="name") Name
-      input(type="text" name="name")
-      label(for="email") Email
-      input(type="email" name="email")
-      label(for="password") Password
-      input(type="password" name="password")
-      label(for="password-confirm") Confirm Password
-      input(type="password" name="password-confirm")
-      input.button(type="submit" value="Register →")
+  .bg-image
+    .container
+      .login-form
+        .row
+          .col-md-4.offset-md-4
+            form(action="/register" method="POST")
+              .input-holder
+                i.icon.far.fa-user
+                input.input(type="text" name="name" placeholder="Name")
+              .input-holder
+                i.icon.far.fa-envelope
+                input.input(type="email" name="email" placeholder="Email")
+              .input-holder
+                i.icon.fas.fa-users
+                input.input(type="text" name="teamname" placeholder="Team Name")
+              .input-holder
+                i.icon.fas.fa-phone
+                input.input(type="text" name="phonenumber" placeholder="Phone Number")
+              .input-holder
+                i.icon.fas.fa-lock
+                input.input(type="password" name="password" placeholder="Password")
+              .input-holder
+                i.icon.fas.fa-lock
+                input.input(type="password" name="password-confirm" placeholder="Confirm Password")
+              .reg
+                p Already registered ?
+                  a.link(href="/login")  Login
+              .input-holder-button
+                input.pl-button(type="submit" value="sign up")

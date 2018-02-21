@@ -20,6 +20,16 @@ const userSchema = new Schema({
     required: 'Please supply a name',
     trim: true
   },
+    teamname: {
+        type: String,
+        required: 'Please supply a team name',
+        trim: true
+    },
+    phonenumber: {
+        type: String,
+        required: 'Please supply a phone number',
+        trim: true
+    },
     level:{
         type:Number,
         default:0,
