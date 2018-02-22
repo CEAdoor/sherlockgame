@@ -21,13 +21,13 @@ exports.play = (req,res) =>{
         return;
     }
     if(level === 4) {
+        res.render('level5', {title: 'Play'});
+        return;
+    }
+    if(level === 5) {
         res.render('completed', {title: 'Play'});
         return;
     }
-    // if(level === 5) {
-    //     res.render('completed', {title: 'Play'});
-    //     return;
-    // }
 };
 exports.newlevel = async(req,res) =>{
     option = req.body.option
@@ -113,7 +113,7 @@ exports.newlevel = async(req,res) =>{
     }
     if(req.user.level === 4)
     {
-        if(option === "e") {
+        if(option === "threetimes") {
             const user = await User.findOneAndUpdate(
                 {_id: req.user._id},
                 {$set: {
