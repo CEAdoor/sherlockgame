@@ -25,6 +25,26 @@ exports.play = (req,res) =>{
         return;
     }
     if(level === 5) {
+        res.render('level6', {title: 'Play'});
+        return;
+    }
+    if(level === 6) {
+        res.render('level7', {title: 'Play'});
+        return;
+    }
+    if(level === 7) {
+        res.render('level8', {title: 'Play'});
+        return;
+    }
+    if(level === 8) {
+        res.render('level9', {title: 'Play'});
+        return;
+    }
+    if(level === 9) {
+        res.render('level10', {title: 'Play'});
+        return;
+    }
+    if(level === 10) {
         res.render('completed', {title: 'Play'});
         return;
     }
@@ -118,7 +138,113 @@ exports.newlevel = async(req,res) =>{
                 {_id: req.user._id},
                 {$set: {
                     level: req.user.level+1,
-                }},
+                },
+                },
+                {new:true,runValidators:true,context: 'query'}
+            );
+            req.flash('success','Answer is correct')
+            res.redirect('/play');
+        }
+        else
+        {
+            req.flash('success','Wrong Answer');
+            res.redirect('/play');
+        }
+
+    }
+    if(req.user.level === 5)
+    {
+        if(option === "edgein") {
+            const user = await User.findOneAndUpdate(
+                {_id: req.user._id},
+                {$set: {
+                    level: req.user.level+1,
+                },
+                },
+                {new:true,runValidators:true,context: 'query'}
+            );
+            req.flash('success','Answer is correct')
+            res.redirect('/play');
+        }
+        else
+        {
+            req.flash('success','Wrong Answer');
+            res.redirect('/play');
+        }
+
+    }
+    if(req.user.level === 6)
+    {
+        if(option === "anilkumar") {
+            const user = await User.findOneAndUpdate(
+                {_id: req.user._id},
+                {$set: {
+                    level: req.user.level+1,
+                },
+                },
+                {new:true,runValidators:true,context: 'query'}
+            );
+            req.flash('success','Answer is correct')
+            res.redirect('/play');
+        }
+        else
+        {
+            req.flash('success','Wrong Answer');
+            res.redirect('/play');
+        }
+
+    }
+    if(req.user.level === 7)
+    {
+        if(option === "muttonsoup") {
+            const user = await User.findOneAndUpdate(
+                {_id: req.user._id},
+                {$set: {
+                    level: req.user.level+1,
+                },
+                },
+                {new:true,runValidators:true,context: 'query'}
+            );
+            req.flash('success','Answer is correct')
+            res.redirect('/play');
+        }
+        else
+        {
+            req.flash('success','Wrong Answer');
+            res.redirect('/play');
+        }
+
+    }
+    if(req.user.level === 8)
+    {
+        if(option === "chacko") {
+            const user = await User.findOneAndUpdate(
+                {_id: req.user._id},
+                {$set: {
+                    level: req.user.level+1,
+                },
+                },
+                {new:true,runValidators:true,context: 'query'}
+            );
+            req.flash('success','Answer is correct')
+            res.redirect('/play');
+        }
+        else
+        {
+            req.flash('success','Wrong Answer');
+            res.redirect('/play');
+        }
+
+    }
+    if(req.user.level === 9)
+    {
+        if(option === "sherlockholmes") {
+            const user = await User.findOneAndUpdate(
+                {_id: req.user._id},
+                {$set: {
+                    level: req.user.level+1,
+                },
+                },
                 {new:true,runValidators:true,context: 'query'}
             );
             req.flash('success','Answer is correct')
