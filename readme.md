@@ -3,7 +3,7 @@
 Online game build on Node JS
 
 
-##How to use
+## How to use
 
 ```bash
 npm install
